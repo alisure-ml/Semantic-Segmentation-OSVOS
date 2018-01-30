@@ -37,10 +37,7 @@ class OSVOSDemo(object):
         test_images = [os.path.join(self.images_path, frame) for frame in test_frames]
         if self.is_train:
             train_images = [os.path.join(self.images_path, '00000.jpg') + ' ' + os.path.join(self.annotations_path, '00000.png'),
-                            os.path.join(self.images_path, '00020.jpg') + ' ' + os.path.join(self.annotations_path, '00020.png'),
-                            os.path.join(self.images_path, '00040.jpg') + ' ' + os.path.join(self.annotations_path, '00040.png'),
-                            os.path.join(self.images_path, '00060.jpg') + ' ' + os.path.join(self.annotations_path, '00060.png'),
-                            os.path.join(self.images_path, '00080.jpg') + ' ' + os.path.join(self.annotations_path, '00080.png')]
+                            os.path.join(self.images_path, '00040.jpg') + ' ' + os.path.join(self.annotations_path, '00040.png')]
             dataset = Dataset(train_images, test_images, './', data_aug=True)
         else:
             dataset = Dataset(None, test_images, './')
